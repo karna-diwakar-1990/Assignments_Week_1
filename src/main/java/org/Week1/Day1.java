@@ -1,10 +1,10 @@
-package org.Test_Leaf;
+package org.Week1;
 
 /**
  * Hello world!
  *
  */
-public class Week1
+public class Day1
 {
     //Week 1 Assignment: Factorial
     public void calculateFactorial(int input){
@@ -44,12 +44,32 @@ public class Week1
         }
     }
 
+    public static void convertNegativetoPositive(int input){
+        int output =0;
+        if(isPositiveNumber(input)){
+            System.out.println("The entered is a positive integer ");
+        }else{
+            System.out.println("The entered input is a negative integer. Hence converting it to positive");
+            output = input - 2*input;
+        }
+        System.out.println("After converting enter input: " + input + " it will be: " + output);
+    }
+
+    public static boolean isPositiveNumber(int input){
+        if(input>0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 
     public static void main( String[] args )
     {
-        Week1 w1 = new Week1();
+        /*Day1 w1 = new Day1();
         w1.isPrimeNumber(5);
         w1.calculateFactorial(5);
-        w1.printFibonacciSeries(10);
+        w1.printFibonacciSeries(10);*/
+        convertNegativetoPositive(-40);
     }
 }
